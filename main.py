@@ -1,7 +1,13 @@
-arr = [10,20,30,80]
-largest = arr[0]
-for i in range (len(arr)):
-    if arr[i] > largest:
-        largest = arr[i]
+class Dog:
+    
+    def __init__(self, name):
+        self.name = name
         
-print(largest)
+    def bark(self):
+        print(f"{self.name} nalla peruda unakku")
+        
+d1 = Dog("chintu")
+d2 = Dog("tintu")
+    
+d1.bark()
+d2.bark()
