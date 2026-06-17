@@ -1,0 +1,18 @@
+class Dog:
+    
+    def __init__(self, name):
+        self.name = name
+        
+    def bark(self):
+        print(f"{self.name} nalla peruda unakku")
+        
+d1 = Dog("chintu")
+d2 = Dog("tintu")
+    
+d1.bark()
+d2.bark()
+
+output 
+------------------------
+chinttu nalla peruda unakku
+tintu nalla peruda unakku
