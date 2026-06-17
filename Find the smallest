@@ -1,0 +1,11 @@
+arr = [10,20,30,40]
+smallest = arr[0]
+for i in range(len(arr)):
+    if arr[i] < smallest:
+        smallest = arr[i]
+    
+print(smallest)
+
+output
+-----------------------
+10
