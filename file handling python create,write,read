@@ -1,0 +1,12 @@
+file = open("college.txt", "w")
+file.write("Dr NGP institute of technology\n AI&DS")
+file.close()
+
+file = open("college.txt", "r")
+print(file.read())
+file.close()
+
+---------------------
+o/p
+Dr NGP institute of technology
+ AI&DS
