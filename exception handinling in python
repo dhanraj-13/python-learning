@@ -15,3 +15,17 @@ except:
 
 output:
 somthing went wrong
+
+================================
+try:
+    print("java")
+    print("python")
+    print( 10 / 0)
+    print("c++")
+except:
+    print("somthing went wrong")
+
+output:
+java
+python
+somtjing went wrong
