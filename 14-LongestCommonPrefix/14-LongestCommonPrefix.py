@@ -1,15 +1,16 @@
-# Last updated: 8/24/2026, 3:48:42 PM
+# Last updated: 8/24/2026, 3:51:22 PM
 1class Solution:
-2    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:   
-3        dummy = temp = ListNode(0)
-4        while l1 != None and l2 != None: #1
-5
-6            if l1.val < l2.val: #2
-7                temp.next = l1 #3
-8                l1 = l1.next #4
-9            else: 
-10                temp.next = l2
-11                l2 = l2.next
-12            temp = temp.next
-13        temp.next = l1 or l2  #5
-14        return dummy.next #6
+2    def removeDuplicates(self, nums):
+3
+4        if len(nums) == 0:
+5            return 0
+6
+7        k = 1
+8
+9        for i in range(1, len(nums)):
+10
+11            if nums[i] != nums[i-1]:
+12                nums[k] = nums[i]
+13                k += 1
+14
+15        return k
