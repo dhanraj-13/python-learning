@@ -1,16 +1,15 @@
-# Last updated: 8/24/2026, 3:48:01 PM
+# Last updated: 8/24/2026, 3:48:42 PM
 1class Solution:
-2    def longestCommonPrefix(self, strs):
-3        strs.sort()
-4        s = ""
-5        i = 0
-6        length = len(strs)
-7
-8        while i < len(strs[0]):
-9            if strs[0][i] == strs[length - 1][i]:
-10                s += strs[0][i]
-11            else:
-12                break
-13            i += 1
-14
-15        return s
+2    def mergeTwoLists(self, l1: ListNode, l2: ListNode) -> ListNode:   
+3        dummy = temp = ListNode(0)
+4        while l1 != None and l2 != None: #1
+5
+6            if l1.val < l2.val: #2
+7                temp.next = l1 #3
+8                l1 = l1.next #4
+9            else: 
+10                temp.next = l2
+11                l2 = l2.next
+12            temp = temp.next
+13        temp.next = l1 or l2  #5
+14        return dummy.next #6
