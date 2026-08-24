@@ -1,21 +1,23 @@
-# Last updated: 8/24/2026, 4:15:10 PM
-1class Solution:
-2    def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-3        # Special case...
-4        if not root:
-5            return true;
-6        # Return the function recursively...
-7        return self.isSame(root.left, root.right)
-8    # A tree is called symmetric if the left subtree must be a mirror reflection of the right subtree...
-9    def isSame(self, leftroot, rightroot):
-10        # If both root nodes are null pointers, return true...
-11        if leftroot == None and rightroot == None:
-12            return True
-13        # If exactly one of them is a null node, return false...
-14        if leftroot == None or rightroot == None:
-15            return False
-16        # If root nodes haven't same value, return false...
-17        if leftroot.val != rightroot.val:
-18            return False
-19        # Return true if the values of root nodes are same and left as well as right subtrees are symmetric...
-20        return self.isSame(leftroot.left, rightroot.right) and self.isSame(leftroot.right, rightroot.left)
+# Last updated: 8/24/2026, 4:16:45 PM
+1# Definition for a  binary tree node
+2# class TreeNode:
+3#     def __init__(self, x):
+4#         self.val = x
+5#         self.left = None
+6#         self.right = None
+7
+8class Solution:
+9    # @param num, a list of integers
+10    # @return a tree node
+11    # 12:37
+12    def sortedArrayToBST(self, num):
+13        if not num:
+14            return None
+15
+16        mid = len(num) // 2
+17
+18        root = TreeNode(num[mid])
+19        root.left = self.sortedArrayToBST(num[:mid])
+20        root.right = self.sortedArrayToBST(num[mid+1:])
+21
+22        return root
