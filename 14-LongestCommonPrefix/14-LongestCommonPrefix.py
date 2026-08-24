@@ -1,16 +1,15 @@
-# Last updated: 8/24/2026, 3:51:22 PM
-1class Solution:
-2    def removeDuplicates(self, nums):
-3
-4        if len(nums) == 0:
-5            return 0
-6
-7        k = 1
-8
-9        for i in range(1, len(nums)):
-10
-11            if nums[i] != nums[i-1]:
-12                nums[k] = nums[i]
-13                k += 1
-14
-15        return k
+# Last updated: 8/24/2026, 3:51:51 PM
+1class Solution(object):
+2    def searchInsert(self, nums, target):
+3        l = 0
+4        r = len(nums) - 1
+5        while l <= r:
+6            mid = (l + r) // 2
+7            if nums[mid] < target:
+8                l = mid + 1
+9            elif nums[mid] > target:
+10                r = mid - 1
+11            else:
+12                return mid
+13        return l
+14        
