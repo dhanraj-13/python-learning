@@ -1,4 +1,4 @@
-# Last updated: 9/10/2026, 1:41:39 PM
+# Last updated: 9/10/2026, 1:58:24 PM
 1class Solution:
 2    def numberOfSubarrays(self, nums: list[int], k: int) -> int:
 3        n = len(nums)
