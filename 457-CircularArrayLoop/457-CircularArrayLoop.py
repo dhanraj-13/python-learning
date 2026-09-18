@@ -1,4 +1,4 @@
-# Last updated: 8/7/2026, 12:39:31 PM
+# Last updated: 9/18/2026, 11:56:58 AM
 1class Solution:
 2    def circularArrayLoop(self, nums: List[int]) -> bool:
 3        n = len(nums)
